@@ -1,4 +1,5 @@
 import { Header } from "../../components/header/header";
+import Build from "../PersonalPage/components/BuildPage/buildPage";
 
 
 const MainPage = () => {
@@ -8,6 +9,7 @@ const MainPage = () => {
                 <Header/>
             </div>
             <h1>Г</h1>
+            <Build/>
             <p>Добро пожаловать на главную страницу!</p>
         </div>
     );
