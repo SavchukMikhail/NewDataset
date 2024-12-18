@@ -21,6 +21,9 @@ export class PatientStore {
     const diseases = this.patients.map(patient => patient.Болезнь);
     return Array.from(new Set(diseases));
   }
+  getTotalPatients() {
+    return this.patients.length;
+}
 }
 
 const patientStore = new PatientStore();

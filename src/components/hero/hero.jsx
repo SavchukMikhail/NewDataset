@@ -1,6 +1,6 @@
 import sky from '../../assets/sky.mp4'
 import styles from './styles.module.scss';
-
+import { SlArrowRightCircle } from "react-icons/sl";
 
 const Hero = () => {
     return (
@@ -15,6 +15,7 @@ const Hero = () => {
                 <h1 className={styles.title}>Первый русскоязычный репозиторий клинических данных</h1>
                 <a className={styles.button}>
                     <span>Зарегистрироваться</span>
+                    <SlArrowRightCircle size={25}/>
                 </a>
             </div>
         </div>

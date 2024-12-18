@@ -3,6 +3,7 @@ import styles from './styles.module.scss';
 import classNames from 'classnames';
 import Logo from '../../images/logo_ssmu_white.svg';
 import { BiSolidUserCircle } from "react-icons/bi";
+
 import Hamburger from 'hamburger-react';
 
 export const Header = () => {

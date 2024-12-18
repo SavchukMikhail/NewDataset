@@ -1,0 +1,38 @@
+h2 {
+    font-size: 20px;
+    color: orange;
+}
+.mainButton {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1.6rem 3.2rem;
+    border-radius: 3.2rem;
+    font-weight: 600;
+
+    justify-content: space-between;
+    background-color: yellow;
+    color: #ffffff;
+    border-radius: 50px;
+    text-decoration: none;
+  
+    &:hover {
+      background-color: #0056b3; /* Цвет кнопки при наведении */
+    }
+  }
+
+  .secondaryButton {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1.6rem 3.2rem;
+    border-radius: 3.2rem;
+    font-weight: 600;
+
+    justify-content: space-between;
+    background-color: green;
+    color: #ffffff;
+    border-radius: 50px;
+    text-decoration: none;
+    &:hover {
+        background-color: red; /* Цвет кнопки при наведении */
+      }
+  }
