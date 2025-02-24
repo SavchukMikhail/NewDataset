@@ -24,7 +24,7 @@ export const Header = () => {
         },
         {
             text: "Новости",
-            link: "#news",
+            link: "news",
         },
         {
             text: "Контакты",
@@ -36,7 +36,10 @@ export const Header = () => {
         <>
             <header className={styles.header}>
                 <div>
-                    <img src={Logo} alt={'ssmu logo'} width={200} height={50}/>
+                    <a href='/'>
+                        <img src={Logo} alt={'ssmu logo'} width={200} height={50}/>
+                    </a>
+                    
                 </div>
                 <div className={styles.menu}>
                             {

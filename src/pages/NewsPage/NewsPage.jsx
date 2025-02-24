@@ -1,9 +1,13 @@
+import { Header } from "../../components/header/header";
+import NewsContent from "./components/NewsContent/NewsContent";
+import styles from './styles.module.scss';
 
 const NewsPage = () => {
     return (
         <div>
-            <h1>Г</h1>
-            <p>Новости!</p>
+            <Header/>
+            <h1>Новости</h1>
+            <NewsContent/>
         </div>
     );
 };
