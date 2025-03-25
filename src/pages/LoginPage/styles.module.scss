@@ -1,0 +1,40 @@
+.loginWrapper {
+    box-sizing: border-box;
+    padding: 40px;
+    background-color: #f2f2f2;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loginContent {
+    margin: auto;
+    min-width: 300px;
+    width: 70%;
+    height: 70%;
+    background-color: #ffffff;
+    
+}
+.loginHeader {
+    width: 100%;
+    background-color: #bd4646;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.loginLink {
+    display: block;
+    width: 250px;
+
+}
+.loginForm {
+    display: block;
+
+}
+
+.fieldData {
+    width: 800px;
+    background-color: red;
+}
