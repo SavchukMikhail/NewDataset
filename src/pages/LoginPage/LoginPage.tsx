@@ -2,10 +2,30 @@ import  '../../../src/globalStyles.scss';
 import styles from './styles.module.scss';
 import Logo from '../../images/logo_ssmu_white.svg';
 import { Input } from '../../components/fields';
+import { Button } from '../../components/buttons';
 import { useState } from 'react';
 
+const validateIsEmpty = (value: string) => {
+    if (!value) return 'текст ошибки';
+    return null;
+}
+
+const validateUsername = (value: string) => {
+    return validateIsEmpty(value);
+}
+const validatePassword = (value: string) => {
+    return validateIsEmpty(value);
+}
+
+//типы и автоподскажи при использовании FormErrors
+interface FormErrors {
+    username : string|null;
+    password : string|null;
+
+}
 const LoginPage = () => {
-        const [formValues, setFormValues] = useState({ username: '', password: ''})
+        const [formValues, setFormValues] = useState({ username: '', password: ''});
+        const [formErrors, setFormErrors] = useState<FormErrors>({username: null, password: null})
     return ( 
         <div className={styles.loginWrapper}>
             <div className={styles.loginContent}>
@@ -19,22 +39,43 @@ const LoginPage = () => {
                     <h1>Вход</h1>
                     <form>
                         <div className={styles.fieldData}>
-                            <Input 
+                            <Input
+                                
                                 placeholder='Имя пользователя' 
                                 value={formValues.username}
-                                onChange={(event: React.ChangeEvent<HTMLInputElement>) => setFormValues({...formValues, username: event.target.value})}
+                                onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+                                    const username = event.target.value;
+                                    setFormValues({...formValues, username})
+
+                                    const error = validateUsername(username);
+                                    setFormErrors({...formErrors, username: error })
+                                }}
+                                {...(
+                                    !!formErrors.username && {
+                                      isError: !!formErrors.username,
+                                      helperText: formErrors.username
+                                    })}
                             />
                         </div>
                         <div className={styles.fieldData}>
                             <Input
                                 placeholder='Пароль'
                                 value={formValues.password}
-                                onChange={(event: React.ChangeEvent<HTMLInputElement>) => setFormValues({...formValues, password: event.target.value})}
+                                onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+                                    const password = event.target.value;
+                                    setFormValues({...formValues, password})
+
+                                    const error = validateUsername(password);
+                                    setFormErrors({...formErrors, password: error })
+                                }}
+                                {...(
+                                    !!formErrors.password && {
+                                      isError: !!formErrors.password,
+                                      helperText: formErrors.password
+                                    })}
                             />
                         </div>
-                        <button>
-                            <span>Войти</span>
-                        </button>
+                        <Button>Войти</Button>
                     </form>
                 </div>
             </div>
