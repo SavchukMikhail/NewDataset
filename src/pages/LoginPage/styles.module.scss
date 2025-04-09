@@ -10,8 +10,7 @@
 .loginContent {
     margin: auto;
     min-width: 300px;
-    width: 70%;
-    height: 70%;
+    width: 50%;
     background-color: #ffffff;
     
 }
@@ -20,6 +19,7 @@
     background-color: #bd4646;
     box-sizing: border-box;
     margin: 0 auto;
+    padding: 2rem 4rem;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -31,6 +31,32 @@
 }
 .loginForm {
     display: block;
+    padding: 5rem 4rem;
 
 }
+.loginForm_title {
+    font-family: var(--font-family-montserrat);
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 4.8rem;
+    margin-bottom: 5rem;
+    text-align: center;
 
+}
+.fieldData {
+    margin-bottom: 5rem;
+    
+}
+.singupContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 2rem;
+}
+.singupContainer_link {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 600;
+    color: var(--main-red);
+}

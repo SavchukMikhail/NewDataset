@@ -4,6 +4,7 @@ import Logo from '../../images/logo_ssmu_white.svg';
 import { Input } from '../../components/fields';
 import { Button } from '../../components/buttons';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const validateIsEmpty = (value: string) => {
     if (!value) return 'текст ошибки';
@@ -24,6 +25,7 @@ interface FormErrors {
 
 }
 const LoginPage = () => {
+        const navigate = useNavigate();
         const [formValues, setFormValues] = useState({ username: '', password: ''});
         const [formErrors, setFormErrors] = useState<FormErrors>({username: null, password: null})
     return ( 
@@ -36,12 +38,13 @@ const LoginPage = () => {
                         <img src={Logo} alt={'ssmu logo'} width={200} height={50}/>
                 </div>
                 <div className={styles.loginForm}>
-                    <h1>Вход</h1>
+                    <h1 className={styles.loginForm_title}>Вход</h1>
                     <form>
                         <div className={styles.fieldData}>
                             <Input
-                                
-                                placeholder='Имя пользователя' 
+                                id="username"
+                                label="Логин"
+                                placeholder='Логин' 
                                 value={formValues.username}
                                 onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
                                     const username = event.target.value;
@@ -59,7 +62,10 @@ const LoginPage = () => {
                         </div>
                         <div className={styles.fieldData}>
                             <Input
+                                id="password"
+                                label="Пароль"
                                 placeholder='Пароль'
+                                type='password'
                                 value={formValues.password}
                                 onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
                                     const password = event.target.value;
@@ -77,6 +83,11 @@ const LoginPage = () => {
                         </div>
                         <Button>Войти</Button>
                     </form>
+                    <div className={styles.singupContainer}>
+                            <a className={styles.singupContainer_link} href='#'>Забыли пароль?</a>
+                            <a className={styles.singupContainer_link} href='#' onClick={() => {navigate('/registration');}}>
+                                Зарегистрироваться</a>
+                    </div>
                 </div>
             </div>
            
