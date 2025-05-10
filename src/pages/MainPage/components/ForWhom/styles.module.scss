@@ -1,0 +1,42 @@
+// styles.module.scss
+.mainWrapper {
+    justify-content: center;
+    margin: 0 auto;
+    padding: 5rem 0;
+    box-sizing: border-box;
+    margin-bottom: 10rem;
+    background-color: #fbfbfb;;
+}
+.wrapperPosition {
+    margin: 0 5rem;
+    padding-left: 20rem;
+}
+.contentWrapper {
+    position: relative;
+    margin-bottom: 3rem; // необходимо для позиционирования дочерних элементов
+}
+.contentWrapper:last-child {
+
+    margin-bottom: 0; // необходимо для позиционирования дочерних элементов
+}
+
+.forWhomContent {
+    display: flex; // Используем Flexbox для выравнивания элементов
+    align-items: flex-start; // Выравнивание по верхнему краю
+    justify-content: space-between; 
+}
+.forWhomContentTitle {
+    margin: 0;
+    color: #a1a1a1;
+    width: 25rem;
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 3.8rem;
+}
+.forWhomContentTitleActive {
+    color: red;
+}
+.heading {
+    margin-right: 20px; // Отступ между заголовком и описанием
+}
+

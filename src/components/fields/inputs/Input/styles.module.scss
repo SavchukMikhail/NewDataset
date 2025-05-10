@@ -1,0 +1,26 @@
+.input {
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    width: 100%;
+    padding: 1.6rem 1.6rem 1.6rem 1.1rem;
+    border: 1px solid #dadada;
+    background-color: #e8f0fe;
+    border-radius: 5px;
+    outline: none;
+}
+.input:hover, 
+.input:active {
+    border-color: black;
+}
+.inputRight {
+        background-color: green;
+}
+.inputError {
+    background-color: rgb(229, 147, 147);
+}
+.warningText {
+    background-color: transparent;
+    padding: 10px;
+    color: red;
+}

@@ -1,43 +1,71 @@
+//Переменные
+$width: 850px;
+
 .header{
-    /* margin: 0 auto; */
+    padding: 2em 1em;
     background-color: #0e0e2a;
-    width: 100vw;
-    height: 80px;
-    padding-left: 5%;
+    height: 50px;
     display: flex;
     justify-content: space-between;
-    // background-color: red;
-    position: fixed; 
-    top: 0;
-    @media screen and (max-width: 769px) {
+
+    @media screen and (max-width: $width) {
         display: none;
+        
+      }
+
+}
+.mobileHeader{
+    display: none;
+    @media screen and (max-width: $width) {
+        width: 100%;
+        display: flex;
         justify-content: flex-end;
         z-index: 10;
       }
-    @media screen and (max-width: 820px) and (min-width: 769px) {
-        padding-left: 2vh;
+}
+.mobileLogo{
+    display: block;
+    height: 70%;
+    min-height: 50px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: #c93239;
+    color: #ffffff;
+    border-radius: 50px;
+    text-decoration: none;
+    @media screen and (max-width: $width) {
+        display: flex;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 3.2rem;
       }
 }
 
-.menuHolder{
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    padding-right: 10%;
+.buttonIcon {
+    display: block;
+    width: 20px;
+    height: 20px;
 }
-.menu{
-    display: flex;
-    gap: 20px;
-}
-// .item{    
-    
-// }
 .itemText{
-    color: white;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 18px;  
-    font-weight: 400;
-    font-family: 'Roboto'; 
+    padding: 0;
+    font-size: 14px;
+    line-height: 18px;
+    font-family: 'Arial'; 
+    @media screen and (max-width: $width) {
+        color: #464646;
+        font-weight: 500;
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+      }
 }
 .item:hover{
     border-bottom: 1px solid #df8c86;
@@ -46,4 +74,66 @@
 }
 .itemTextActive{
     color: #781f19;
+}
+
+
+
+.mobileWrapper {
+        display: none;
+        
+        @media screen and (max-width: $width) {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #0e0e2a;
+            height: 10vw;
+            padding: 1em;
+          }
+   
+}
+.small {
+    display: none;
+    
+}
+.big {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    
+
+    gap: 100px;
+    z-index: 10;
+    width: 100%;
+    box-sizing: border-box;
+}
+.menuMobile{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 3vh;
+}
+.menuHolder{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+}
+.buttonWrapper {
+    box-sizing: border-box;
+    padding: 0 3vh;
+    width: 100%;
 }
